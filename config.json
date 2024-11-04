@@ -1,0 +1,14 @@
+{
+    "id_project":"clbank",
+    "api_key":"AIzaSyALIg3as8DmOhN3b2UOqc8AHbtIyEVM1lw",
+    "cms_mode":"pub",
+    "site_url":"https://bankcl.com",
+    "apiKey": "AIzaSyALIg3as8DmOhN3b2UOqc8AHbtIyEVM1lw",
+    "authDomain": "clbank.firebaseapp.com",
+    "databaseURL": "https://clbank-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "projectId": "clbank",
+    "storageBucket": "clbank.appspot.com",
+    "messagingSenderId": "14228562704",
+    "appId": "1:14228562704:web:933e65be1dd55ac725fb95",
+    "mysql_api_url":"http://localhost:3001"
+}

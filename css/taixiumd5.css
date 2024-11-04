@@ -1,0 +1,742 @@
+#tx {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 1200;
+  height: 100%;
+  align-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+  
+  #tx #game_tx{
+    background-image: url('../images/tx_bk.png?v=16');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 794px;
+    height: 459px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #game_tx #dia{
+    width: 300px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    cursor: pointer;
+    align-items: center;
+  }
+  
+  #game_tx #dia #dice,#game_tx #dia #dice_return{
+    width: 300px;
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    position: absolute;
+    color: white;
+    align-items: center;
+    height: 300px;
+  }
+  
+  #game_tx #dia #effect_c{
+    background-image: url('../images/effect_c.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 248px;
+    width: 248px;
+    margin-top: 50px;
+    animation: spin 2s linear infinite; 
+    position: absolute;
+    z-index: 0;
+  }
+  
+  #game_tx .info{
+    width: 200px;
+    text-align: center;
+  }
+  
+  #game_tx .info .txt_session{
+    color: black;
+    position: relative;
+    font-size: 11px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    top: -9px;
+    left: -14px;
+    text-shadow: 1px 1px 1px #ebb052;
+    font-weight: bold;
+  }
+
+#game_tx .info .timer_session {
+    position: relative;
+    top: -9px;
+    background-color: black;
+    width: 49px;
+    border-radius: 13px;
+    height: 21px;
+    color: yellow;
+    font-size: 11px;
+    padding-top: 3px;
+    left: 59px;
+    box-shadow: inset 0px 3px 2px darkgoldenrod;
+    opacity: 0;
+}
+
+  #game_tx .info .txt{
+    width: 89px;
+    position: relative;
+    top: -5px;
+  }
+  
+  #game_tx .info .txt.tai{
+    right:25px;
+  }
+  
+  #game_tx .info .txt.xiu{
+    left: 25px;
+  }
+  
+  #game_tx .info .txt_user{
+    color: white;
+    position: relative;
+    font-size: 12px;
+  }
+  
+  #game_tx .info .txt_user.tai{
+    top: 18px;
+    right: -61px;
+  }
+  
+  #game_tx .info .txt_user.xiu{
+    left: -59px;
+    top: 15px;
+  }
+  
+  #game_tx .btn{
+    width: 200px;
+    text-align: center;
+  }
+
+  #game_tx .btn div{
+    width: 68px;
+    height: 68px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  
+  #game_tx .btn .close {
+    position: relative;
+    top: 25px;
+    left: -21px;
+    background-image: url('../images/btn.png');
+    background-size: 2015px 80px;
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+  }
+  
+  #game_tx .btn .close:hover {
+    background-position: -68px 0px;
+  }
+
+  #game_tx .btn .rank {
+    position: relative;
+    top: 39px;
+    left: 56px;
+    background-image: url('../images/btn.png');
+    background-size: 2014px 76px;
+    background-position: -979px 0px;
+    background-repeat: no-repeat;
+  }
+  
+  #game_tx .btn .rank:hover {
+    background-position: -1048px 0px;
+  }
+  
+  #game_tx .btn .chat{
+    position: relative;
+    top: 81px;
+    right: -60px;
+    background-image: url('../images/btn.png');
+    background-size: 2020px 80px;
+    background-position: -274px -1px;
+    background-repeat: no-repeat;
+  }
+  
+  #game_tx .btn .chat:hover{
+    background-position: -343px -1px;
+  }
+  
+  #game_tx .btn .info{
+    width: 66px;
+    position: relative;
+    top: 8px;
+    left: 83px;
+    background-image: url('../images/btn.png');
+    background-size: 1917px 76px;
+    background-position: -662px -1px;
+    background-repeat: no-repeat;
+  }
+  
+  #game_tx .btn .info:hover{
+    background-position: -729px -1px;
+  }
+  
+  #game_tx .btn .chart{
+    position: relative;
+    top: 14px;
+    left: 12px;
+    background-image: url('../images/btn.png');
+    background-size: 2004px 76px;
+    background-position: -135px -1px;
+    background-repeat: no-repeat;
+  }
+
+  #game_tx .btn .chart:hover{
+    background-position:-203px -1px;
+  }
+
+  #game_tx .btn .question{
+    position: relative;
+    top: 54px;
+    left: 3px;
+    background-image: url('../images/btn.png');
+    background-size: 1993px 77px;
+    background-position: -830px 0px;
+    background-repeat: no-repeat;
+  }
+
+  #game_tx .btn .question:hover{
+    background-position: -900px 0px;
+  }
+
+  #game_tx .btn .history{
+    position: relative;
+    top: 59px;
+    left: 64px;
+    background-image: url('../images/btn.png');
+    background-size: 1993px 77px;
+    background-position:-546px 0px;
+    background-repeat: no-repeat;
+  }
+
+  #game_tx .btn .history:hover{
+    background-position: -617px 0px;
+  }
+
+  #game_tx .btn .hand{
+    width: 66px;
+    position: relative;
+    top: 85px;
+    left: 11px;
+    background-image: url('../images/btn.png');
+    background-size: 2020px 80px;
+    background-repeat: no-repeat;
+  }
+
+  #game_tx .btn .hand.used{
+    background-position: -485px -1px;
+  }
+
+  #game_tx .btn .hand.block{
+    background-position: -414px -1px;
+  }
+  
+  .sprite_dice{
+    width: 51px;
+    height: 51px;
+    background-image: url(../images/dice.png);
+    background-position: 0px 0px;
+    background-size: 301px 51px;
+    transform: scale(1.6);
+  }
+  
+  .sprite_dice.p1{
+    top: 101px;
+    position: relative;
+    left: 45px;
+  }
+  
+  .sprite_dice.p2{
+    top: -17px;
+    position: relative;
+    left: -1px;
+  }
+  
+  .sprite_dice.p3{
+    top: 0px;
+    position: relative;
+    left: -44px;
+  }
+  
+  .sprite_dice.d1{
+    background-position: 0px 0px;
+  }
+  
+  .sprite_dice.d6{
+    background-position: 51px 0px;
+  }
+  
+  .sprite_dice.d5{
+    background-position: 101px 0px;
+  }
+  
+  .sprite_dice.d4{
+    background-position: 151px 0px;
+  }
+  
+  .sprite_dice.d3{
+    background-position: 201px 0px;
+  }
+  
+  .sprite_dice.d2{
+    background-position: 251px 0px;
+  }
+  
+  .zoom { animation: zoomEffect 2s infinite;}
+  
+  #tx_msg{
+    position: fixed;
+    width: 652px;
+    height: 402px;
+    z-index: 2000;
+    top: 50%;
+    bottom: 50%;
+    background-image: url(../images/msg.png);
+    background-size: 100% 100%;
+    left: 50%;
+    right: 50%;
+    display: flex;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  #tx_msg .btn_close{
+    position: relative;
+    width: 68px;
+    height: 46px;
+    top: -1px;
+    background-size: 100% 100%;
+    right: -292px;
+    cursor: pointer;
+  }
+
+  #tx_msg .title{
+    position: relative;
+    top: -39px;
+    font-size: 20px;
+    color: burlywood;
+    text-shadow: 2px 2px 2px black;
+    font-weight: bold;
+  }
+  
+  #tx_msg .btn_close:hover{
+    background-image: url('../images/chat_btn_close.png');
+  }
+  
+  #tx_msg .msg_body{
+    color: white;
+    overflow-y: auto;
+    width: 571px;
+    height: 300px;
+  }
+
+  #tx_msg .msg_body .txt{
+    padding: 10px;
+  }
+  
+  @keyframes spin {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+  }
+  
+  @keyframes zoomEffect {
+    0% {transform: scale(1);}
+    30% { transform: scale(1.3);}
+    50% { transform: scale(0.8);}
+    70% { transform: scale(1.4);}
+    100% {transform: scale(1);}
+  }
+
+  .btn-bet{
+    background-image: url('../images/btn.png');
+    background-size: 1224px 57px;
+    background-position: -678px 0px;
+    background-repeat: no-repeat;
+    width: 130px;
+    height: 49px;
+    position: relative;
+    top: 36px;
+  }
+  
+  .btn-bet:hover{
+    background-position: -808px 0px;
+  }
+  
+  .btn-bet.block{
+    background-position: -938px 0px;
+  }
+  
+  .btn-bet.tai{
+    right: 16px;
+  }
+  
+  .btn-bet.xiu{
+    left: 36px;
+  }
+  
+  #tx div #dice_history{
+    height: 22px;
+    z-index: 60000;
+    display: flex;
+    position: relative;
+    top: -92px;
+  }
+  
+  #tx div #dice_history .item{
+    width: 20px;
+    height: 20px;
+  }
+  
+  #tx div #dice_history .item.tai{
+    background-image: url('../images/r_tai.png');
+  }
+  
+  #tx div #dice_history .item.xiu{
+    background-image: url('../images/r_xiu.png');
+  }
+  
+  #tx div #dice_md5{
+    position: relative;
+    color: #e3db76;
+    top: -75px;
+    left: 58px;
+    font-size: 14px;
+    text-shadow: 2px 2px 0px #992604;
+  }
+  
+  #dice #guess{
+    background-image: url(../images/dia.png);
+    width: 210px;
+    height: 210px;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 70px;
+    z-index: 200000;
+  }
+  
+  #dice_panel_bet{
+    color: white;
+    background-color: #00000042;
+    width: auto;
+    position: relative;
+    top: -92px;
+    display: none;
+    z-index: 500;
+    text-align: center;
+  }
+
+  #dia #dice_roll{
+    position: relative;
+    top: 21px;
+  }
+  
+  #dia #countdown{
+    font-size: 45px;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 63px;
+    z-index: 500;
+  }
+  #dice_panel_bet .btn-bet {
+      box-shadow:inset 0px 1px 0px 0px #fce2c1;
+      background:linear-gradient(to bottom, #ffc477 5%, #fb9e25 100%);
+      background-color:#ffc477;
+      border-radius:6px;
+      border:1px solid #eeb44f;
+      display:inline-block;
+      cursor:pointer;
+      color:#ffffff;
+      font-family:Arial;
+      font-size:15px;
+      font-weight:bold;
+      text-decoration:none;
+      text-shadow:0px 1px 0px #cc9f52;
+    width: auto !important;
+    margin: 2px;
+    padding: 5px !important;
+    top: 0px;
+    height: auto;
+  }
+  
+  #dice_panel_bet .btn-bet:hover {
+      background:linear-gradient(to bottom, #fb9e25 5%, #ffc477 100%);
+      background-color:#fb9e25;
+  }
+  
+  #dice_panel_bet .btn-bet:active {
+      position:relative;
+      top:1px;
+  }
+  
+  .btn-bet-done{
+      box-shadow:inset 0px 1px 0px 0px #f5978e;
+      background:linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
+      background-color:#f24537;
+      border-radius:6px;
+      border:1px solid #d02718;
+      display:inline-block;
+      cursor:pointer;
+      color:#ffffff;
+      font-family:Arial;
+      font-size:15px;
+      font-weight:bold;
+      padding:6px 24px;
+      text-decoration:none;
+      text-shadow:0px 1px 0px #810e05;
+  }
+  .btn-bet-done:hover {
+      background:linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
+      background-color:#c62d1f;
+  }
+  .btn-bet-done:active {
+      position:relative;
+      top:1px;
+  }
+  
+  .btnx2 {
+    width: auto;
+      box-shadow:inset 0px 1px 0px 0px #a4e271;
+      background:linear-gradient(to bottom, #89c403 5%, #77a809 100%);
+      background-color:#89c403;
+      border-radius:6px;
+      border:1px solid #74b807;
+      display:inline-block;
+      cursor:pointer;
+      color:#ffffff;
+      font-family:Arial;
+      font-size:15px;
+      font-weight:bold;
+      padding:6px 24px;
+      text-decoration:none;
+      text-shadow:0px 1px 0px #528009;
+    margin: 2px;
+  }
+  .btnx2:hover {
+      background:linear-gradient(to bottom, #77a809 5%, #89c403 100%);
+      background-color:#77a809;
+  }
+  .btnx2:active {
+      position:relative;
+      top:1px;
+  }
+  
+  .txt_money_bet{
+    font-size: 24px;
+    position: relative;
+    top: 28px;
+    color: #f9ff00;
+    text-shadow: 3px 3px 3px black;
+  }
+  
+  .txt_money_bet_total{
+    position: relative;
+    top: 26px;
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+  }
+  
+  .txt_money_bet_total.tai{
+    right: 16px;
+  }
+  
+  .txt_money_bet_total.xiu{
+    left: 28px;
+  }
+  
+  #tx_chat{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 380px;
+    height: 480px;
+    z-index: 2000;
+    background-image: url('../images/chat.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  
+  #tx_chat .btn_close{
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 51px;
+    position: absolute;
+    top: 2px;
+    right: 0px;
+    cursor: pointer;
+  }
+  
+  #tx_chat .btn_close:hover{
+    background-image: url(../images/chat_btn_close.png);
+  }
+  
+  #tx_chat #tx_chat_all_item{
+    width: 346px;
+    height: 332px;
+    background-color: #8b592759;
+    margin-left: 20px;
+    margin-top: 69px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-y: auto;
+  }
+  
+  #tx_chat_all_item .chat_item{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  #tx_chat_all_item .chat_item .username{
+    color: yellow;
+  }
+  
+  #tx_chat #tx_inp_chat{
+    width: 335px;
+    height: 45px;
+    margin-top: 17px;
+    border: none;
+    color: white;
+    margin-left: 27px;
+    background-color: transparent;
+  }
+  
+  #tx_chat #btn_send{
+    position: relative;
+    bottom: 38px;
+    left: 296px;
+    width: 65px;
+    height: 33px;
+    cursor: pointer;
+  }
+  
+  #tx_chat #btn_send:hover{
+    content: url('../images/btn_send_hover.png');
+  }
+  
+  .golden-dot {
+    width: 10px;
+    height: 10px;
+    background-color: yellow;
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 5px rgba(255, 223, 0, 0.8);
+    z-index: 1300;
+}
+
+#btn_copy_md5{
+  width: 70px !important;
+  height: 40px !important;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  top: 49px;
+  left: -93px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+#btn_copy_md5:hover{
+  background-image: url('../images/btn_copy.png');
+}
+
+.swal2-container{
+  z-index: 3000;
+}
+  /* Extra small devices (phones, 0px and up) */
+  @media (max-width: 575.98px) {
+    #tx{transform: scale(58%, 58%);}
+    #tx_msg {transform: scale(63%, 64%) translate(-80%, -69%);}
+  }
+  
+  /* Small devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    #tx{transform: scale(58%, 58%);display: block;}
+    #tx_msg {transform: scale(63%, 64%) translate(-80%, -69%);}
+    #tx div #dice_history {top: -92px;left: 224px;}
+    #tx div #dice_md5 {top: -75px;left: 283px;}
+  }
+
+  /* Landscape mode for devices with 844px x 390px resolution */
+@media only screen and (min-width: 390px) and (max-width: 844px) and (orientation: landscape) {
+  #tx{transform: scale(58%, 58%);display: block;}
+  #tx_msg {transform: scale(63%, 64%) translate(-80%, -69%);}
+  #tx div #dice_history {top: -92px;left: 224px;}
+  #tx div #dice_md5 {top: -75px;left: 283px;}
+}
+
+/* Landscape mode for devices with 932px x 430px resolution */
+@media only screen and (min-width: 430px) and (max-width: 932px) and (orientation: landscape) {
+  #tx{transform: scale(58%, 58%);display: block;}
+  #tx_msg {transform: scale(63%, 64%) translate(-80%, -69%);}
+  #tx div #dice_history {top: -92px;left: 224px;}
+  #tx div #dice_md5 {top: -75px;left: 283px;}
+}
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) and (max-width: 991.98px) {
+
+  }
+  
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+
+  }
+  
+  /* Extra large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) and (max-width: 1399.98px) {
+
+  }
+  
+  /* Extra Extra large devices (very large desktops, 1400px and up) */
+  @media (min-width: 1400px) {
+
+  }
+  
+  /* Landscape orientation */
+  @media (orientation: landscape) {
+
+  }
+  
+  /* Portrait orientation */
+  @media (orientation: portrait) {
+    /* CSS for devices in portrait mode */
+  }
